@@ -8,13 +8,10 @@ import {
   FormControl,
   FormControlLabel,
   FormLabel,
-  InputLabel,
-  MenuItem,
   Modal,
   Paper,
   Radio,
   RadioGroup,
-  Select,
   Snackbar,
   Stack,
   SxProps,
@@ -309,7 +306,7 @@ const App = () => {
         <ToggleButtonGroup
           value={sortOrder}
           exclusive
-          onChange={(e, newOrder) => {
+          onChange={(_, newOrder) => {
             if (newOrder !== null) setSortOrder(newOrder);
           }}
           aria-label="sort order"
@@ -325,7 +322,7 @@ const App = () => {
         <ToggleButtonGroup
           value={sortField}
           exclusive
-          onChange={(e, newField) => {
+          onChange={(_, newField) => {
             if (newField !== null) setSortField(newField);
           }}
           aria-label="sort field"
